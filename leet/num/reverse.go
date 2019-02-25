@@ -1,7 +1,6 @@
-package main
+package num
 
 import (
-	"log"
 	"math"
 	"strconv"
 )
@@ -33,7 +32,4 @@ func reverse(x int) int {
 	}
 	return 0
 }
-func main() {
-	i := reverse(1534236469)
-	log.Println(i)
-}
+

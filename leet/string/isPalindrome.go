@@ -1,4 +1,4 @@
-package main
+package string
 
 import (
 	"strconv"
@@ -18,7 +18,4 @@ func isPalindrome(x int) bool {
 		}
 		return true
 	}
-}
-func main() {
-	isPalindrome(123)
 }

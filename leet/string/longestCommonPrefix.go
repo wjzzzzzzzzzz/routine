@@ -1,7 +1,6 @@
-package main
+package string
 
 import (
-	"log"
 	"strings"
 )
 
@@ -23,13 +22,4 @@ func longestCommonPrefix(strs []string) string {
 		result = temp
 	}
 	return result
-}
-func main() {
-	log.SetFlags(log.Lshortfile | log.LstdFlags)
-	test := []string{
-		"ca", "caaa", "ca",
-	}
-	prefix := longestCommonPrefix(test)
-	log.Println(prefix)
-
 }
