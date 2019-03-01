@@ -4,14 +4,14 @@ import (
 	"sync"
 )
 
-type Stack struct {
+type MyStack struct {
 	size  int
 	top   int
 	value []int
 	sync.RWMutex
 }
 
-func (s *Stack) Pop() (rtn int, success bool) {
+func (s *MyStack) Pop() (rtn int, success bool) {
 	if !s.IsNull() {
 		s.top--
 		rtn = s.value[s.top]
@@ -21,7 +21,7 @@ func (s *Stack) Pop() (rtn int, success bool) {
 	return rtn, false
 }
 
-func (s *Stack) Push(a int) bool {
+func (s *MyStack) Push(a int) bool {
 	if !s.IsFull() {
 		s.value[s.top] = a
 		s.top++
@@ -30,7 +30,7 @@ func (s *Stack) Push(a int) bool {
 	return false
 }
 
-func (s *Stack) Pushs(a ...int) bool {
+func (s *MyStack) Pushs(a ...int) bool {
 	if !s.IsFull() && s.size-s.top >= len(a) {
 		for _, v := range a {
 			s.Push(v)
@@ -40,7 +40,7 @@ func (s *Stack) Pushs(a ...int) bool {
 
 }
 
-func (s *Stack) IsNull() bool {
+func (s *MyStack) IsNull() bool {
 
 	if s.top == -1 {
 		return true
@@ -49,7 +49,7 @@ func (s *Stack) IsNull() bool {
 	}
 
 }
-func (s *Stack) IsFull() bool {
+func (s *MyStack) IsFull() bool {
 
 	if s.size <= s.top {
 		return true
@@ -58,14 +58,13 @@ func (s *Stack) IsFull() bool {
 	}
 
 }
-func (s *Stack) Show() []int {
+func (s *MyStack) Show() []int {
 
 	return s.value
 
 }
-func NewStack(size int) *Stack {
-
-	return &Stack{
+func NewStack(size int) Stack {
+	return &MyStack{
 		size:  size,
 		top:   0,
 		value: make([]int, size),
