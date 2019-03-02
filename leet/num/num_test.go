@@ -32,3 +32,27 @@ func Test_maxArea(t *testing.T) {
 
 	log.Println(maxArea(s1))
 }
+func Test_combinationSum(t *testing.T) {
+	s1 := []int{3, 2, 0, 4, 5}
+
+	log.Println(combinationSum(s1, 15))
+}
+func Test_maxSubArray(t *testing.T) {
+	s1 := []int{3, 2, 0, 4, 5}
+
+	log.Println(maxSubArray(s1))
+}
+func Test_maxProfit(t *testing.T) {
+	s1 := []int{7, 6, 5, 4, 3, 2}
+	log.Println(maxProfit(s1))
+}
+func Test_maxProfit2(t *testing.T) {
+	s1 := []int{7, 1, 5, 3, 6, 4}
+	log.Println(maxProfit2(s1))
+}
+func Test_singleNumber(t *testing.T) {
+	s1 := []int{
+		4, 5, 6, 7,8 ,7, 6, 5, 4}
+	log.Println(singleNumber(s1))
+
+}
