@@ -15,6 +15,7 @@ package num
 //f(n) = max(f(n-1) + A[n], A[n]);
 //在n点卖出的话最大利润f（n）=max（f(n-1),前面最大的值-index（i）)）//
 //动态规划 前i天的最大收益 = max{前i-1天的最大收益，第i天的价格-前i-1天中的最小价格}
+//ok
 func maxProfit(prices []int) int {
 	if len(prices)==0{
 		return 0

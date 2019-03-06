@@ -9,7 +9,7 @@ package num
 //跳过中间的点会使得利润降低 。因此只要在降价之前卖出就可以
 //一直大于 不给index赋值 ，小于 price[i-1]-price[index] //检测不到最后一个值
 //[7,1,5,3,6,4]
-
+//ok
 
 func maxProfit2(prices []int) int {
 	if len(prices) == 0 {

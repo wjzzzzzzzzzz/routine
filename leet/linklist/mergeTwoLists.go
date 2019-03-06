@@ -8,27 +8,23 @@ package linklist
  *     Next *ListNode
  * }
  */
+
 func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
-	if l1 == nil || l2 == nil {
-		return nil
+	if l1 == nil{
+		return l2
 	}
-	var result *ListNode
-	for l1 == nil && l2 == nil {
-		if l1.Val <= l1.Val {
-			result.Next = l1
-			l1 = l1.Next
-			result = result.Next
-		} else {
-			result.Next = l2
-			l2 = l2.Next
-			result = result.Next
-		}
+	if l2 == nil{
+		return l1
 	}
-	if l1 == nil {
-		result.Next = l2
+	var res *ListNode
+
+	//返回下个节点
+	if l1.Val >= l2.Val{
+		res = l2
+		res.Next = mergeTwoLists(l1,l2.Next)
+	}else{
+		res = l1
+		res.Next = mergeTwoLists(l1.Next,l2)
 	}
-	if l2 == nil {
-		result.Next = l1
-	}
-	return result
+	return res
 }

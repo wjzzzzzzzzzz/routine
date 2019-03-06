@@ -3,6 +3,7 @@ package num
 import (
 	"testing"
 	"log"
+	"encoding/hex"
 )
 
 func init() {
@@ -52,7 +53,19 @@ func Test_maxProfit2(t *testing.T) {
 }
 func Test_singleNumber(t *testing.T) {
 	s1 := []int{
-		4, 5, 6, 7,8 ,7, 6, 5, 4}
+		4, 5, 6, 7, 8, 7, 6, 5, 4}
 	log.Println(singleNumber(s1))
+	a := []byte{24, 0}
+	log.Println(hex.EncodeToString(a))
+
+}
+func Test_mySqrt(t *testing.T) {
+	log.Println(mySqrt(169))
+}
+func Test_climbStairs(t *testing.T) {
+
+
+	log.Println(climbStairs(4))
+
 
 }

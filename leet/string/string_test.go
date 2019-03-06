@@ -37,7 +37,7 @@ func Test_searchInsert(t *testing.T) {
 	var s1 = []int{0, 0, 0, 0, 0, 0, 1, 2, 2, 2}
 	var s2 = []int{15, 15, 17, 17}
 	var s3 = []int{1, 2}
-	var s4 = []int{1,3, 5, 5, 5, 6}
+	var s4 = []int{1, 3, 5, 5, 5, 6}
 	log.Println(searchInsert(s1, 5))
 	log.Println(searchInsert(s2, 6))
 	log.Println(searchInsert(s3, 7))
@@ -54,3 +54,29 @@ func Test_searchInsert1(t *testing.T) {
 	//log.Println(searchInsert(s4, 3))
 	log.Println(s1, s3)
 }
+func Test_lengthOfLastWord(t *testing.T) {
+	s:="abcdefg"
+	log.Println(len(s))
+	s=s[:len(s)-1]
+	log.Println(s,len(s))
+	a := " a"
+	word := lengthOfLastWord(a)
+	log.Println(word)
+}
+func Test_plusOne(t *testing.T) {
+	a := []int{1}
+	//word := plusOne(a)
+	one := plusOne(a)
+	log.Println(one)
+
+}
+
+func Test_addBinary(t *testing.T) {
+	//切片包含左边,不包含右边
+	a:="123"
+	log.Println(a[0:3])
+	b := []int{1, 2, 3}
+	log.Printf("%T%v",b[2],b[2])
+	log.Println(b[2])
+}
+
