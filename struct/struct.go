@@ -7,4 +7,8 @@ type Stack interface {
 	IsFull() bool
 	Show() []int
 }
-
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}

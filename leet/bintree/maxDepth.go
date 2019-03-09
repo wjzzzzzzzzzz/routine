@@ -7,18 +7,21 @@ package binTree
 //说明: 叶子节点是指没有子节点的节点。
 
 //层序遍历  父节点出 子节点进入
-//func maxDepth(root *TreeNode) int {
-//	var dep
-//	var queue []*TreeNode
-//	if root.Left
+//func maxDepth1(root *TreeNode) int {
+//
 //
 //}
-//func maxDepth(root *TreeNode) int {
-//	left:= maxDepth(root.Left)
-//	right:= maxDepth(root.Right)
-//	if left>right{
-//		return  left+1
-//	}else{
-//		return right+1
-//	}
-//}
+//ok
+func maxDepth(root *TreeNode) int {
+	if root==nil{
+		return 0
+	}
+	left:= maxDepth(root.Left)
+	right:= maxDepth(root.Right)
+	if left>right{
+		return  left+1
+	}else{
+		return right+1
+	}
+
+}

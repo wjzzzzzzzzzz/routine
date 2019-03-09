@@ -24,15 +24,47 @@ func Test_addTwoNumbers(t *testing.T) {
 			},
 		},
 	}
-	lists := mergeTwoLists(node1,node2)
+	lists := mergeTwoLists(node1, node2)
 	for {
 		log.Println(lists.Val)
-		if lists.Next!=nil{
-			lists=lists.Next
+		if lists.Next != nil {
+			lists = lists.Next
 
-		}else{
+		} else {
 			break
 		}
 
+	}
+}
+
+func Test_deleteDuplicates(t *testing.T) {
+	node1 := &ListNode{
+		Val: 1,
+		Next: &ListNode{
+			Val: 3,
+			Next: &ListNode{
+				Val: 5,
+				Next: &ListNode{
+					Val: 5,
+					Next: &ListNode{
+						Val: 6,
+						Next: &ListNode{
+							Val: 6,
+							Next: &ListNode{
+								Val: 7,
+								Next: &ListNode{
+									Val: 7,
+								},
+							},
+						},
+					},
+				},
+			},
+		},
+	}
+	node := deleteDuplicates(node1)
+	for node != nil {
+		log.Println(node.Val)
+		node = node.Next
 	}
 }

@@ -11,8 +11,13 @@ type TreeNode struct {
 //说明: 叶子节点是指没有子节点的节点。
 //
 //示例:
-
+//ok
 func hasPathSum(root *TreeNode, sum int) bool {
-
-
+	if root==nil{
+		return false
+	}
+	if root.Left==nil&&root.Right == nil{
+		return sum==root.Val
+	}
+	return hasPathSum(root.Left,sum-root.Val)||hasPathSum(root.Right,sum-root.Val)
 }

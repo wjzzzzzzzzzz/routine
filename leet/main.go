@@ -1,6 +1,9 @@
 package main
 
-import "log"
+import (
+	"log"
+	"routine/leet/linklist"
+)
 
 func init() {
 	log.SetFlags(log.Lshortfile | log.LstdFlags)
@@ -24,4 +27,9 @@ func searchInsert2(nums []int, target int)  {
 	nums[0]=100
 	log.Printf("%p %v",nums,nums)
 
+}
+func test1(nums []int, target int)  {
+	ints := make([]*linklist.ListNode, 0)
+	s:=&ints
+	*s = append(*s, &linklist.ListNode{})
 }
