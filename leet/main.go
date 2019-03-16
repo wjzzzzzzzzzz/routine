@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"routine/leet/linklist"
+	"reflect"
 )
 
 func init() {
@@ -10,13 +11,10 @@ func init() {
 
 }
 func main(){
-	var s1 = []int{0, 0, 0, 0, 0, 0, 1, 2, 2, 2}
-	var s2 = []int{0, 0, 0, 0, 0, 0, 1, 2, 2, 2}
-	//log.Printf("%p %v",s1,s1)
-	searchInsert1(s1,3)
-	//log.Printf("%p %v",s1,s1)
-	searchInsert2(s2,3)
-	//log.Printf("%p %v",s2,s2)
+	a:="sss1"
+	u := a[0]
+	log.Println(reflect.TypeOf(u))
+
 }
 func searchInsert1(nums []int, target int)  {
 	log.Printf("%p %v",target,target)
@@ -33,3 +31,10 @@ func test1(nums []int, target int)  {
 	s:=&ints
 	*s = append(*s, &linklist.ListNode{})
 }
+
+func Teststring(nums []int, target int)  {
+	ints := make([]*linklist.ListNode, 0)
+	s:=&ints
+	*s = append(*s, &linklist.ListNode{})
+}
+

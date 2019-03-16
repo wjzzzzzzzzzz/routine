@@ -1,9 +1,5 @@
 package string
 
-import (
-	"strings"
-)
-
 
 
 //给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -14,67 +10,67 @@ import (
 //ok
 
 //用切片
-func isValid1(s string) bool {
-	stack := make([]string, len(s))
-	left := "{[("
-	right := "}])"
-	ms := strings.Split(s, "")
-	top := 0
-	if len(s)%2 != 0 {
-		return false
-	}
-	for _, v := range ms {
-		stack[top] = v
-		if top >= 1 {
-			func(a, b string) {
-				if strings.Index(left, a) != -1 && strings.Index(right, b) != -1 {
-					if a == "{" && b == "}" || a == "[" && b == "]" || a == "(" && b == ")" {
-						stack = append(stack[:top-1], stack[top+1:]...)
-						top = top - 2
-					}
-				}
-			}(stack[top-1], v)
-		}
-		top++
-	}
-	if top == 0 {
-		return true
-	} else {
-		return false
-	}
-}
+//func isValid1(s string) bool {
+//	stack := make([]string, len(s))
+//	left := "{[("
+//	right := "}])"
+//	ms := strings.Split(s, "")
+//	top := 0
+//	if len(s)%2 != 0 {
+//		return false
+//	}
+//	for _, v := range ms {
+//		stack[top] = v
+//		if top >= 1 {
+//			func(a, b string) {
+//				if strings.Index(left, a) != -1 && strings.Index(right, b) != -1 {
+//					if a == "{" && b == "}" || a == "[" && b == "]" || a == "(" && b == ")" {
+//						stack = append(stack[:top-1], stack[top+1:]...)
+//						top = top - 2
+//					}
+//				}
+//			}(stack[top-1], v)
+//		}
+//		top++
+//	}
+//	if top == 0 {
+//		return true
+//	} else {
+//		return false
+//	}
+//}
 
 //map
-func isValid2(s string) bool {
-	if len(s)%2 != 0 {
-		return false
-	}
-	stack := make([]string, len(s))
-	m := map[string]string{
-		"{": "}",
-		"[": "]",
-		"(": ")",
-	}
-	ms := strings.Split(s, "")
-	top := 0
-	for _, v := range ms {
-		stack[top] = v
-		if top >= 1 {
-			func(a, b string) {
-				if m[a] == b {
-					stack = append(stack[:top-1], stack[top+1:]...)
-					top = top - 2
-				}
-			}(stack[top-1], v)
-		}
-		top++
-	}
-	if top == 0 {
-		return true
-	} else {
-		return false
-	}
-}
+//func isValid2(s string) bool {
+//	if len(s)%2 != 0 {
+//		return false
+//	}
+//	stack := make([]string, len(s))
+//	m := map[string]string{
+//		"{": "}",
+//		"[": "]",
+//		"(": ")",
+//	}
+//	ms := strings.Split(s, "")
+//	top := 0
+//	for _, v := range ms {
+//		stack[top] = v
+//		if top >= 1 {
+//			func(a, b string) {
+//				if m[a] == b {
+//					stack = append(stack[:top-1], stack[top+1:]...)
+//					top = top - 2
+//				}
+//			}(stack[top-1], v)
+//		}
+//		top++
+//	}
+//	if top == 0 {
+//		return true
+//	} else {
+//		return false
+//	}
+//}
 type Statck struct {
 	Link []string
 }

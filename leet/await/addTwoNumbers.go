@@ -1,4 +1,4 @@
-package linklist
+package await
 
 type ListNode struct {
 	Val  int

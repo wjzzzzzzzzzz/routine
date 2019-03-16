@@ -63,9 +63,25 @@ func Test_mySqrt(t *testing.T) {
 	log.Println(mySqrt(169))
 }
 func Test_climbStairs(t *testing.T) {
-
-
 	log.Println(climbStairs(4))
+}
+func Test_majorityElement(t *testing.T) {
+	log.Println(majorityElement([]int{1, 2, 2}))
+}
+func Test_trailingZeroes(t *testing.T) {
+	var result int
+	var ge int
+	for i := 1; i <= 100; i++ {
+		result *= i
+	}
+	log.Println(result)
+	for result%10 == 0 {
+		result = result / 10
+		ge++
+	}
+	log.Println(ge)
 
-
+}
+func Test_trailingZeroes1(t *testing.T) {
+	log.Println(trailingZeroes1(35))
 }

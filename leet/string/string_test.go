@@ -80,3 +80,14 @@ func Test_addBinary(t *testing.T) {
 	log.Println(b[2])
 }
 
+
+func Test_isPalindrome1(t *testing.T) {
+
+	s := "A"
+	//log.Println(s[0],s[1])
+	log.Println(string(s[0]+1))
+}
+
+func Test_convertToTitle(t *testing.T) {
+	log.Println(convertToTitle(701))
+}

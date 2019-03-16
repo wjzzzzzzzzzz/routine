@@ -12,3 +12,7 @@ type TreeNode struct {
 	Left  *TreeNode
 	Right *TreeNode
 }
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
