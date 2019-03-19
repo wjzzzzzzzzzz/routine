@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>      <!--第一行是 XML 声明。它定义 XML 的版本 (1.0) 和所使用的"UTF-8"编码。-->
+<UserInformation>　　　　　　　　　　　　 <!--第一行描述文档的根元素（像在说：“本文档是记录用户信息的”）：-->
+    <string age="18">yinzhengjie
+    </string>   <!--本行和以下两行都是跟的子元素，当然你可以给它嵌套更多的子子孙孙。注意，这里的标签名称是“string”，这个标签名称你也可以自己随意更改的哟！-->
+    <string age="20">尹正杰</string>
+</UserInformation>

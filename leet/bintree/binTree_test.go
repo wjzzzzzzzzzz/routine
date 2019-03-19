@@ -6,7 +6,7 @@ import (
 )
 
 func Test_maxDepth(t *testing.T) {
-	tree:=&TreeNode{
+	tree := &TreeNode{
 		Val: 1,
 		Right: &TreeNode{
 			Val: 3,
@@ -15,11 +15,11 @@ func Test_maxDepth(t *testing.T) {
 				Right: &TreeNode{
 					Val: 5,
 				},
-				Left:&TreeNode{
+				Left: &TreeNode{
 					Val: 6,
 				},
 			},
-			Left:&TreeNode{
+			Left: &TreeNode{
 				Val: 7,
 			},
 		},
@@ -27,12 +27,12 @@ func Test_maxDepth(t *testing.T) {
 			Val: 2,
 		},
 	}
-	depth := maxDepth(tree)
-	log.Println(depth)
-
+	tree.log()
+	//depth := maxDepth(tree)
+	//log.Println(depth)
 }
 func Test_hasPathSum(t *testing.T) {
-	tree:=&TreeNode{
+	tree := &TreeNode{
 		Val: 1,
 		Right: &TreeNode{
 			Val: 100,
@@ -41,11 +41,11 @@ func Test_hasPathSum(t *testing.T) {
 				Right: &TreeNode{
 					Val: 5,
 				},
-				Left:&TreeNode{
+				Left: &TreeNode{
 					Val: 6,
 				},
 			},
-			Left:&TreeNode{
+			Left: &TreeNode{
 				Val: 200,
 			},
 		},
@@ -53,7 +53,10 @@ func Test_hasPathSum(t *testing.T) {
 			Val: 100,
 		},
 	}
-	depth := hasPathSum(tree,101)
+	depth := hasPathSum(tree, 101)
 	log.Println(depth)
-
+}
+func Test_isValid(t *testing.T) {
+	log.Println(isValid(10))
+	NewBinTree(nil,1,1,nil)
 }

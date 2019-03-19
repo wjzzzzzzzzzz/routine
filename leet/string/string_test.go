@@ -86,8 +86,12 @@ func Test_isPalindrome1(t *testing.T) {
 	s := "A"
 	//log.Println(s[0],s[1])
 	log.Println(string(s[0]+1))
+	log.Printf("T",s[0])
 }
 
 func Test_convertToTitle(t *testing.T) {
-	log.Println(convertToTitle(701))
+
+}
+func Test_isIsomorphic(t *testing.T) {
+	log.Println( isIsomorphic("b", "a"))
 }
