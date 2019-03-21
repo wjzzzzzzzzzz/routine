@@ -5,37 +5,12 @@ import (
 	"log"
 )
 
-
 func Test_addTwoNumbers(t *testing.T) {
-	node1 := &ListNode{
-		Val: 1,
-		Next: &ListNode{
-			Val: 3,
-			Next: &ListNode{
-				Val: 5,
-			},
-		},
-	}
-	node2 := &ListNode{
-		Val: 2,
-		Next: &ListNode{
-			Val: 4,
-			Next: &ListNode{
-				Val: 6,
-			},
-		},
-	}
-	lists := mergeTwoLists(node1, node2)
-	for {
-		log.Println(lists.Val)
-		if lists.Next != nil {
-			lists = lists.Next
+	l1 := NewList(true, 1,0,0,0,0,0,8)
+	l2 := NewList(true, 0)
+	res := addTwoNumbers1(l1, l2)
+	res.log()
 
-		} else {
-			break
-		}
-
-	}
 }
 
 func Test_deleteDuplicates(t *testing.T) {
@@ -87,6 +62,6 @@ func Test_reverseList(t *testing.T) {
 	list.log()
 }
 func Test_removeElements(t *testing.T) {
-	list1 := NewList(true, 4, 3,3,3,4,3)
+	list1 := NewList(true, 4, 3, 3, 3, 4, 3)
 	removeElements(list1, 3).log()
 }

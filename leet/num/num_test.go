@@ -34,9 +34,9 @@ func Test_maxArea(t *testing.T) {
 	log.Println(maxArea(s1))
 }
 func Test_combinationSum(t *testing.T) {
-	s1 := []int{3, 2, 0, 4, 5}
+	//s1 := []int{3, 2, 0, 4, 5}
 
-	log.Println(combinationSum(s1, 15))
+	//log.Println(combinationSum(s1, 15))
 }
 func Test_maxSubArray(t *testing.T) {
 	s1 := []int{3, 2, 0, 4, 5}
@@ -85,3 +85,30 @@ func Test_trailingZeroes(t *testing.T) {
 func Test_trailingZeroes1(t *testing.T) {
 	log.Println(trailingZeroes1(35))
 }
+func Test_twoSum1(t *testing.T) {
+	log.Println(twoSum1([]int{1, 3, 4, 6, 7, 9}, 10))
+}
+func Test_dichotomy(t *testing.T) {
+	log.Println(dichotomy([]int{1, 3, 4, 6, 7, 9}, 4))
+}
+func Test_containsDuplicate(t *testing.T) {
+	log.Println(containsDuplicate([]int{}))
+}
+func Test_containsNearbyDuplicate(t *testing.T) {
+	log.Println(containsNearbyDuplicate([]int{99, 99}, 2))
+}
+func Test_getCommKey(t *testing.T) {
+	//log.Println(Test_getCommKey)
+}
+func Test_intersection(t *testing.T) {
+	ints := make(map[int]int)
+	log.Println(ints[1], ints)
+	log.Println(intersection([]int{1, 2, 3, 4}, []int{3, 5}))
+}
+func Test_merge(t *testing.T) {
+	ints := []int{1, 3, 5, 0, 0}
+	merge(ints, 3,[]int{2,4}, 2)
+	log.Println(ints)
+}
+
+
