@@ -60,3 +60,8 @@ func Test_isValid(t *testing.T) {
 	log.Println(isValid(10))
 	NewBinTree(nil,1,1,nil)
 }
+func Test_NewTree(t *testing.T) {
+	value := []int{1, 2, 3, 4, 5}
+	TreeRoot := create(1, value)
+	show(TreeRoot)
+}

@@ -6,7 +6,7 @@ import (
 )
 
 func Test_addTwoNumbers(t *testing.T) {
-	l1 := NewList(true, 1,0,0,0,0,0,8)
+	l1 := NewList(true, 1, 0, 0, 0, 0, 0, 8)
 	l2 := NewList(true, 0)
 	res := addTwoNumbers1(l1, l2)
 	res.log()
@@ -64,4 +64,15 @@ func Test_reverseList(t *testing.T) {
 func Test_removeElements(t *testing.T) {
 	list1 := NewList(true, 4, 3, 3, 3, 4, 3)
 	removeElements(list1, 3).log()
+}
+func Test_isPalindrome(t *testing.T) {
+
+	//list1 := NewList(true, 1,2,3,2,1)
+	list1 := NewList(true, 0, 1)
+	log.Println(isPalindrome(list1))
+}
+func Test_deleteNode(t *testing.T) {
+	list1 := NewList(true, 0, 1,2,3)
+	deleteNode(list1.Next)
+	list1.log()
 }

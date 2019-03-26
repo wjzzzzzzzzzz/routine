@@ -1,4 +1,4 @@
-package await
+package binTree
 
 /*给定一个二叉树，检查它是否是镜像对称的。
 
@@ -20,7 +20,8 @@ package await
 
 //判断是否对称 =判断左子树和右子树是否对称 ，即 root
 func isSymmetric(root *TreeNode) bool {
-
-	return false
-
+	if root==nil{
+		return true
+	}
+	return isSameTree(root.Right, invertTree(root.Left))
 }
