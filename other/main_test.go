@@ -13,3 +13,8 @@ func Test_map(t *testing.T) {
 		log.Println(key,value)
 	}
 }
+func Test_point(t *testing.T) {
+	//指针为nil
+	s:=append([]int{}, 1)
+	log.Println(s)
+}

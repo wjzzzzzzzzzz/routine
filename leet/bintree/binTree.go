@@ -12,34 +12,14 @@ func Mirror(root *TreeNode) {
 
 }
 
-func (t *TreeNode) log() {
-	s := make([]int, 0, 500)
-	//var s []int
-	t.mergeValue(s)
-	log.Println(s)
-}
-func (t *TreeNode) mergeValue(a []int) {
-	if t != nil {
-		log.Println("之前", a)
-		a = append(a, t.Val)
-		log.Printf("%p", a)
-		log.Println("之后", a)
-		log.Println(t.Val)
-		t.Left.mergeValue(a)
-		t.Right.mergeValue(a)
-	}
-}
+
 func NewBinTree(nodes ...interface{}) *TreeNode {
 	if !isValid(len(nodes)) {
 		return nil
 	}
-	//root:=&TreeNode{
-	//}
-
 	for i := 1; i < len(nodes); i++ {
 		switch nodes[i].(type) {
 		case int:
-
 
 		case nil:
 		}
@@ -71,16 +51,16 @@ func show(treeNode *TreeNode) {
 		return
 	}
 }
-
-
-
-
-
-
-
-
+func (t *TreeNode) traverse(s *[]int) {
+	if t == nil {
+		return
+	}
+	*s= append(*s, t.Val)
+	log.Printf("%p         %v,%v",s,s,t.Val)
+	t.Left.traverse(s)
+	t.Right.traverse(s)
+}
 type Node int
-
 func isValid(l int) bool {
 	x := int(math.Sqrt(float64(l))) + 1
 	if 2*l == (x)*(x+1) {
@@ -88,6 +68,7 @@ func isValid(l int) bool {
 	}
 	return false
 }
+
 //************************************************************
 ////二叉搜索树
 //type BinarySearchTree struct {
