@@ -20,8 +20,11 @@ package binTree
 
 //判断是否对称 =判断左子树和右子树是否对称 ，即 root
 func isSymmetric(root *TreeNode) bool {
-	if root==nil{
+	if root == nil {
 		return true
 	}
 	return isSameTree(root.Right, invertTree(root.Left))
+}
+func test() {
+
 }

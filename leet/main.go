@@ -3,38 +3,41 @@ package main
 import (
 	"log"
 	"routine/leet/linklist"
-	"reflect"
+	"time"
 )
 
 func init() {
 	log.SetFlags(log.Lshortfile | log.LstdFlags)
 
 }
-func main(){
-	a:="sss1"
-	u := a[0]
-	log.Println(reflect.TypeOf(u))
-
+func main() {
+	for i := 0; i < 3; i++ {
+		go func(i int) {
+			log.Println(i)
+		}(i)
+	}
+	for {
+		time.Sleep(time.Second)
+	}
 }
-func searchInsert1(nums []int, target int)  {
-	log.Printf("%p %v",target,target)
+func searchInsert1(nums []int, target int) {
+	log.Printf("%p %v", target, target)
 	nums = append(nums, target)
-	log.Printf("%p %v",nums,nums)
+	log.Printf("%p %v", nums, nums)
 }
-func searchInsert2(nums []int, target int)  {
-	nums[0]=100
-	log.Printf("%p %v",nums,nums)
+func searchInsert2(nums []int, target int) {
+	nums[0] = 100
+	log.Printf("%p %v", nums, nums)
 
 }
-func test1(nums []int, target int)  {
+func test1(nums []int, target int) {
 	ints := make([]*linklist.ListNode, 0)
-	s:=&ints
+	s := &ints
 	*s = append(*s, &linklist.ListNode{})
 }
 
-func Teststring(nums []int, target int)  {
+func Teststring(nums []int, target int) {
 	ints := make([]*linklist.ListNode, 0)
-	s:=&ints
+	s := &ints
 	*s = append(*s, &linklist.ListNode{})
 }
-

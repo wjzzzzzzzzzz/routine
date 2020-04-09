@@ -1,9 +1,11 @@
 package num
 
 import (
-	"testing"
-	"log"
 	"encoding/hex"
+	"fmt"
+	"log"
+	"strings"
+	"testing"
 )
 
 func init() {
@@ -107,8 +109,24 @@ func Test_intersection(t *testing.T) {
 }
 func Test_merge(t *testing.T) {
 	ints := []int{1, 3, 5, 0, 0}
-	merge(ints, 3,[]int{2,4}, 2)
+	merge(ints, 3, []int{2, 4}, 2)
 	log.Println(ints)
 }
+func Test_isHappy(t *testing.T) {
+	happy := isHappy(19)
+	log.Println(happy)
+	//i := square([]int{1, 9})
+	//log.Println(i)
+}
 
+func Test_is1Happy(t *testing.T) {
+	a := "4.1"
 
+	split := strings.Split(a, ".")
+	fmt.Println(split[:len(split)])
+
+}
+func Test_permute(t *testing.T) {
+	ints := insert(2, []int{})
+	fmt.Println(ints)
+}
