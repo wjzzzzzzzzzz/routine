@@ -11,7 +11,7 @@ var logger = log.New(os.Stdout, "", log.Ldate|log.Ltime|log.Lshortfile)
 
 func main() {
 	startAt := time.Now()
-	fi, err := os.Open("learnTool/qr/qrcode.jpg")
+	fi, err := os.Open("qrcode.jpg")
 	if !check(err) {
 		return
 	}
